@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "华文彩云";
+		}
+		#img1{
+			position: absolute;
+		}
+        .regist{
+        	width: 450px;
+        	height: 700px;
+        	background:white;
+        	opacity: .7;
+        	position: absolute;
+        	left: 850px;
+        	top: 30px;
+        	border: solid blue 1px;
+        	border-radius: 10px;
+        	z-index: 10;
+        }
+        .logo{
+             width: 200px;
+             height: 100px;
+             background:white;
+             margin: 20px 125px 0px 125px;
+        }
+        input{
+        	height: 30px;
+        	width: 300px;
+        	margin: 20px 63px 0px 63px;
+        	font-size: 20px;
+        	border-radius: 5px;
+        	border:solid 2px #CDB7B5 ;
+        	padding: 3px 10px 3px 10px;
+        }
+        #warm1{
+        	color: red;
+        	display: none;
+        	margin-left: 75px;
+        }#warm2_01{
+        	color: red;
+        	display: none;
+        	margin-left: 75px;
+        }
+        #warm2_02{
+        	color: red;
+        	display: none;
+        	margin-left: 75px;
+        }
+        #zc{
+        	width: 200px;
+        	height: 40px;
+        	border-radius: 5px;
+        	border: none;
+        	background: blue;
+        	margin: 20px 125px 0px 125px;
+        	font-size: 20px;
+        	color: white;
+        }
+        #reg{
+        	text-decoration: none;
+        }
+        #aa{
+        	padding-left: 210px;
+        	margin-top: 30px;
+        }
+		</style>
+		<script>
+			window.onload=function(){
+				var warm1=document.getElementById("warm1");
+				var warm2_01=document.getElementById("warm2_01");
+				var warm2_02=document.getElementById("warm2_02");
+				var zc=document.getElementById("zc");
+				var t1=document.getElementById("t1");
+				var t2_01=document.getElementById("t2_01");
+				var t2_02=document.getElementById("t2_02");
+				zc.onclick=function(){
+					//账号检测
+					if(t1.value=="1061047244"){
+						warm1.style.display="none";
+					}else{
+						warm1.style.display="block";
+					}
+					//密码检测
+					if(t2_01.value.length>7&&t2_01.value.length<13){
+						warm2_01.style.display="none";
+					}else{
+						warm2_01.style.display="block";
+					}
+					//密码再次确认
+					if(t2_02.value==t2_01.value){
+						warm2_02.style.display="none";
+					}else{
+						warm2_02.style.display="block";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="regist">
+			<div class="logo">
+				<img src="../img/透明logo.png" />
+			</div>
+			<div><input id="t1" type="text" placeholder="请输入账号"/></div>
+			<p id="warm1">账号已存在！请重新输入</p>
+			<!--<div><input id="t1" type="text" placeholder="请输入手机号"/></div>-->
+			<div><input id="t2_01" type="password" placeholder="请输入密码"/></div>
+			<p id="warm2_01">密码必须8-12位！</p>
+			<div><input id="t2_02" type="password" placeholder="请再次确认密码"/></div>
+			<p id="warm2_02">两次密码输入不一致！</p>
+			<div>
+			<!--<input type="text" id="yzm" placeholder="输入手机验证码"/>-->
+			</div>
+			<button id="zc">注册</button>
+			<div id="aa"><a>已有账号进入</a><a href="../loginpage/login.html" id="reg">登录页面</a></div>
+		</div>
+		<div id="img1">
+			<img src="../img/register.gif" width="1350px" />
+		</div>
+	</body>
+</html>
