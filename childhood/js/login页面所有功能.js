@@ -56,11 +56,16 @@ function randomNum(min,max){
             ctx.arc(randomNum(0,_width),randomNum(0,_height), 1, 0, 2*Math.PI);
             ctx.fill();
         }
-        //登录按钮验证
+        //登录按钮验证码验证
     	var dl=document.getElementById("dl");
         var yzm=document.getElementById("yzm");
         var warm3=document.getElementById("warm3");
         var _picTxt;
+        var t1=document.getElementById("t1");
+        var warm1=document.getElementById("warm1");
+        var t2=document.getElementById("t2");
+        var warm2=document.getElementById("warm2");
+
         dl.onclick=function(){
         	if(yzm.value==_picTxt){
         		console.log("成功");
@@ -69,6 +74,18 @@ function randomNum(min,max){
         		console.log("失败");
         		warm3.style.display="block";
         	}
+        	    //账户验证
+        	    if(t1.value=="1061047244"){
+                	warm1.style.display="none";
+                }else{
+                	warm1.style.display="block";
+                }
+                //密码验证
+                if(t2.value=="12345678"){
+                	warm2.style.display="none";
+                }else{
+                	warm2.style.display="block";
+                }
         return _picTxt;//返回随机数字符串
     }
 
@@ -78,7 +95,7 @@ function randomNum(min,max){
     
     //登录按钮功能
     var dl=document.getElementById("dl");
-
+                //登录按钮变色功能
 				dl.onmousedown=function(){
 					dl.style.backgroundColor="#00008B";
 				}
