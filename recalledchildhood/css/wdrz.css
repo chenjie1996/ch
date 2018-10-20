@@ -1,0 +1,113 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background:#f6f6f6;
+	height: 100%;
+	overflow: hidden;
+}
+#wrap{
+	width: 133px;
+	height: 200px;
+	position: relative;
+	left: 400px;
+	top: 120px;
+	transform-style: preserve-3d;
+	transform: perspective(1200px) rotateX(-10deg) rotateY(0deg);
+}
+#wrap img{
+	width: 80px;
+	height: 100px;
+	position:absolute;
+    top:0;
+    left:0;
+    box-shadow: 0 0 10px #FFFFFF;
+    border-radius:10px;
+    box-reflect:below 8px linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    -webkit-box-reflect:below 8px -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+}
+#wrap img:hover{
+	cursor: pointer;
+}
+#btn{
+    width: 80px;
+    height: 40px;
+	background: gray;
+    position: absolute;
+	left: 1420px;
+	top: 20px;
+	border-radius: 6px;		
+}
+#btn:hover{
+	cursor: pointer;
+	background:#e5e4e2;
+}
+#btn a{
+	color: white;
+	line-height: 40px;
+	display: inline-block;
+	position: absolute;
+	left: 9px;
+	font-size: 16px;
+}
+#btn a:hover{
+	color: black;
+}
+.log{
+	width: 600px;
+	height: 620px;
+	position: relative;
+	left: 900px;
+	top: -100px;
+}
+.log h3{
+	font-size: 30px;
+	color:#FF4500;
+	text-shadow: 3px 2px 4px greenyellow;
+}
+.log textarea{
+	position: absolute;
+	left: 2px;
+	resize: none;
+	font-size: 16px;
+}
+#btn2{
+	position: absolute;
+	top: 560px;
+	left: 270px;
+	width: 80px;
+    height: 40px;
+    background: gray;
+    border-radius: 6px;
+}
+#btn2:hover{
+	background: #e5e4e2;
+}
+#btn2 a{
+	color: white;
+	line-height: 40px;
+	display: inline-block;
+	font-size: 20px;
+	position: absolute;
+	left: 20px;
+}
+#btn2 a:hover{
+	cursor: pointer;
+	color: black;
+}
+
+.zi{
+	width: 640px;
+	height: 100px;
+	background: #F6F6F6;
+	position: fixed;
+	left: 100px;
+	top:550px;
+	overflow: hidden;
+}
+.zi img{
+	width: 40px;
+	height: 40px;
+}
+
