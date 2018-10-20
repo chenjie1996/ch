@@ -2,31 +2,38 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=7" />
 		<title></title>
-		<script type="text/javascript" src="../js/login页面所有功能.js" ></script>
 		<script type="text/javascript" src="../js/jquery-1.12.0.js" ></script>
+		<script type="text/javascript" src="../js/login页面所有功能.js" ></script>
 		<style>
 		*{
 			margin: 0;
 			padding: 0;
 			font-family: "华文彩云";
 		}
+		body{
+			background: url(../img/240385-140FPK61556.jpg) no-repeat fixed center top;
+		    -webkit-background-size: 100% 100%;
+		    -moz-background-size: 100% 100%;
+		    -ms-background-size: 100% 100%;
+		    -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
+		}
 		#canvas{
             cursor:pointer;
             position: absolute;
             padding: 15px 0px 0px 20px;
         }
-		#img1{
-			position: absolute;
-		}
         .login{
         	width: 450px;
         	height: 700px;
         	background:white;
         	opacity: .7;
-        	position: absolute;
-        	left: 850px;
-        	top: 30px;
+        	float: right;
+        	margin-right: 100px;
+    		margin-bottom: 20px;
+        	margin-top: 20px;
         	border: solid blue 1px;
         	border-radius: 10px;
         	z-index: 10;
@@ -92,38 +99,84 @@
         }
         #UFO{
             position: absolute;
-            right: 200px;
+            right: 300px;
             z-index: 100;
-            top: 370px;
+            top: 100px;
             width: 0px;
             height: 0px;
         }
+        #hole{
+			width: 0px;
+			height: 0px;
+			position: relative;
+			display: block;
+			left:700px;
+			
+		}
 		</style>
 		<script>
 			$(function(){
 				$("#dl").on("click",function(){
 					$("#UFO").animate({
 						right:"550px",
-						top: "370px",
+						top: "100px",
 						width:"145px",
 						height:"70px"
 					},500,"linear",function(){
 						$("#UFO").animate({
-							right:"650px",
-							top: "370px",
+							right:"750px",
+							top: "150px",
 							width:"0px",
 							height:"0px"
 						},500,"linear",function(){
 						$("#UFO").animate({
-							right:"200px",
-							top: "370px",
+							right:"300px",
+							top: "100px",
 							width:"0px",
 							height:"0px"
 							})
 						})
 					})
 				})
+				    $("#dl").on("click",function(){
+					    $("#hole").animate({
+					    left:"300px",
+						width:"700px",
+						height:"600px"
+					},500,"linear",function(){
+						$("#hole").animate({
+							left:"350px",
+							bottom:"120px",
+							width:"700px",
+							height:"600px"
+						},500,"linear",function(){
+						$("#hole").animate({
+							left:"700px",
+						    width:"0px",
+							height:"0px"
+						   })						
+						})
+					})
+				})
 			})
+			var ele ;
+
+			$.fn.extend({
+			    rotate: function () {
+			        ele = this ;
+			        setInterval('singleRotate()',20);
+			    }
+			});
+			
+			var degree = 0;
+
+			function singleRotate() {
+    			degree = degree + 50 * Math.PI / 180;
+    			ele.css("transform","rotate("+degree+"deg)");
+			}
+		$(document).ready(function () {
+                $("#hole").rotate();
+        });     
 		</script>
 	</head>
 	<body>
@@ -140,14 +193,11 @@
 			<canvas id="canvas" width="150px" height="50px"></canvas>
 			<p id="warm3">验证码错误！刷新重新输入</p>
 			</div>
-			<button id="dl">登录</button>
+			<a href="#" id="delayed"><button id="dl">登录</button></a>
 			<div id="aa"><a>还没有账号请点击→</a><a href="../registpage/regist.html" id="reg">注册新账号</a></div>
 			<a href="../findpage/find.html" id="find">找回密码</a>
 		</div>
 		<img id="UFO" src="../img/飞碟.png"/>
-		<div id="img1">
-			<img src="../img/register.gif" width="1350px" />
-			
-		</div>	
+		<img id="hole" src="../img/黑洞.png" />
 	</body>
 </html>

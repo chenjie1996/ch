@@ -65,13 +65,16 @@ function randomNum(min,max){
         var warm1=document.getElementById("warm1");
         var t2=document.getElementById("t2");
         var warm2=document.getElementById("warm2");
-
+            
         dl.onclick=function(){
         	if(yzm.value==_picTxt){
         		console.log("成功");
+//      		alert(yzm.value);
+//      		alert(_picTxt)
         		warm3.style.display="none";
         	}else{
         		console.log("失败");
+//      		alert(yzm.value);
         		warm3.style.display="block";
         	}
         	    //账户验证
@@ -86,18 +89,28 @@ function randomNum(min,max){
                 }else{
                 	warm2.style.display="block";
                 }
+            //用jq写用户登录验证是否成功，成功则登录不成功无法进入页面
+            $("#delayed").click(function(){
+              	if (yzm.value==_picTxt&&t1.value=="1061047244"&&t2.value=="12345678") {
+          		setTimeout(function(){
+						location.href = "../index.html";
+				},2000);
+              	} else{
+              		
+              	}
+            });
         return _picTxt;//返回随机数字符串
-    }
-
+      }
     }
     drawPic();
     //上面都是验证码功能
     
-    //登录按钮功能
+    //登录按钮变色功能
     var dl=document.getElementById("dl");
-                //登录按钮变色功能
+    var hole=document.getElementById("hole");
 				dl.onmousedown=function(){
 					dl.style.backgroundColor="#00008B";
+					hole.style.display="block";
 				}
 				dl.onmouseup=function(){
 					dl.style.backgroundColor="blue";
