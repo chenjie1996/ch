@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../js/information.js" ></script>
+		<script type="text/javascript" src="../js/jquery-1.12.0.js" ></script>
+		<script type="text/javascript" src="../js/lunbo.js" ></script>
+		<style>
+		*{margin: 0;padding: 0;font-family: "华文彩云";}
+		body{
+			
+			background: url(../img/背景1.png) no-repeat fixed center bottom;
+		    -webkit-background-size: 100% 100%;
+		    -moz-background-size: 100% 100%;
+		    -ms-background-size: 100% 100%;
+		    -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
+		}
+		#daohang{
+				background: white;
+				height: 50px;
+				width: 100%;
+				position: fixed;
+				z-index: 100;
+		}
+		#daohanglist a{
+			text-decoration: none;
+			color: black;
+		}
+		#daohanglist li{
+			float: left;
+			list-style: none;
+			margin-left: 50px;
+			text-align: center;
+			line-height: 50px;
+		}
+		#daohangfirstli{
+			margin-right: 50px;
+		}
+		#daohangfirstli img{
+			width: 70px;
+			height: 50px;
+			top: 0px;
+			left: 40px;
+			position: relative;
+		}
+		#daohanga1 img{
+			position: relative;
+			top: 10px;
+			width: 40px;
+			height: 30px;
+			left: -10px;
+		}
+		#daohanga11 img{
+			width: 55px;
+			height: 35px;
+			margin-top: 10px;
+		}
+		#danghangli2{
+			margin-right: 750px;
+		}
+		#daohang input{
+			position: absolute;
+			right: 800px;
+			top: 10px;
+			height: 25px;
+			width: 200px;
+			left: 400px;
+		}
+		#secarch{
+			position: absolute;
+			height: 20px;
+			left: 580px;
+			top: 15px;
+			display: inline-block;
+		}
+	#daohang>ul>li>ul{
+			position: absolute;
+			display: none;
+			left: 1200px;
+			z-index: 150;
+		}
+		#daohanglist1,#danghanglist2 li{
+			float: none;
+			margin: 0;
+			padding: 0;
+			border-radius: 5px;
+		}
+		/*#daohanglist1,#daohang>ul>li:hover ul{
+			display: block;
+			background: white;
+			line-height: 16px;
+			font-size: 16px;
+			width: 120px;
+		}*/
+		#daohang #danghanglist2{
+			display: none;
+			background: white;
+			line-height: 16px;
+			font-size: 16px;
+			width: 120px;
+		}
+		#daohanglist1,#danghanglist2 li a{
+			text-align: center;
+		}
+		#daohanglist1,#danghanglist2 li:hover{
+			background: #8590a6;
+		}
+		#daohanglist1,#danghanglist2 li a:hover{
+			color: white;
+		}
+		#daohang #danghangli3 ul{
+			position: absolute;
+			display: none;
+			left: 1100px;
+			z-index: 150;
+			top: 50px;
+		}
+		#danghangli3 li{
+			float: none;
+			margin: 0;
+			padding: 0;
+			border-top: solid 1px #AAAACC;
+			border-radius: 5px;
+		}
+		#grxx{
+			width: 20px;
+			height: 20px;
+			position: relative;
+			top: 5px;
+			left: -5px;
+		}
+		#guanbi{
+			width: 20px;
+			height: 20px;
+			position: relative;		
+			top: 5px;
+			left: -5px;		
+		}
+		#rizhi{
+			width: 20px;
+			height: 20px;
+			position: relative;		
+			top: 5px;
+			left: -5px;	
+		}
+		.bgimg{position: absolute; margin-top: 50px;}
+		.headportrait{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 250px;
+			left: 330px;
+			z-index: 10;}
+		.carousel{
+			position: absolute;
+			left: 330px;
+			}
+		.back{
+			width: 970px;
+			height: 250px;
+			display: block;
+			position: absolute;
+			opacity: 0;
+		}
+		.btn_head{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background: black;
+			opacity: 0.3;}
+		.headportrait a{
+			border-radius:5px ;
+			color: white;
+			width: 100px;
+			text-decoration: none;
+			padding: 72px 51px 73px 50px ;
+			position: absolute;
+			background: black;
+			opacity: 0.3;
+			text-align: center;
+		}
+		.headportrait a img{
+			width: 50px;
+			height: 30px;
+			margin: 0px 5px 0px 5px;
+		}
+        .datepage{
+        	width: 800px;
+        	height: 888px;
+        	background: white;
+        	position: absolute;
+        	top: 250px;
+        	left: 500px;
+        	margin-bottom: 100px;
+        	z-index: 5;}
+        #return{
+        	color: #CDBA96;
+        	float: right;
+        	position: relative;
+        	bottom: 8px;
+        	text-decoration: none;
+        	margin-top: 30px;
+        	}
+        #return img{
+        	width: 15px;
+        	height: 15px;
+        	margin-left: 20px;
+        	margin-right: 20px;
+        	position: relative;
+        	top: 3px;
+        	}	
+        #box-username{
+        	height: 10px;
+        	padding: 30px 0px 30px 0px;
+        	display: block;
+        	margin-top: 20px;}
+        #username_01{
+            margin: 0px 0px 0px 50px;
+            float: left;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            bottom: 16px;
+            padding: 0px 80px 0px 0px;
+            display: block;}
+        #username_02{
+            margin: 0px 0px 0px 50px;
+            padding: 0px 80px 0px 0px;
+            float: left;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            bottom: 16px;
+            display: none;}
+        #username_warm{
+        	display: none;
+        	color: #CDBA96;
+        	float: left;
+        	position: relative;
+        	bottom: 8px;}
+        #btn-alter1{
+        	position: relative;
+        	bottom: 3px;
+        	right: 60px;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: none;
+        	float: left;}
+        #btn-alter1 img{width: 13px;height: 13px;color: #0000FF;}
+        #btn-alter2{
+        	position: relative;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: none;
+        	float: left;}
+        #btn-alter2 img{width: 13px;height: 13px;}
+        #btn-alter3{
+        	position: relative;
+        	right: 30px;
+        	top: 3px;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: none;
+        	float: left;}
+        #btn-alter3 img{width: 13px;height: 13px;}
+        #btn-alter4{
+        	position: relative;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: none;
+        	float: left;}
+        #btn-alter4 img{width: 13px;height: 13px;}
+        #btn-alter5{
+        	position: relative;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: none;
+        	float: left;}
+        #btn-alter5 img{width: 13px;height: 13px;}
+        #box-username-1{
+        	height: 50px;
+        	padding: 30px 0px 30px 0px;
+        	margin-top: 20px;
+        	display: none;}
+        #box-username-1 p{
+        	position: absolute;
+        	left: 50px;
+        	top:50px ;
+        	font-size: 18px;}
+        #box-username-1 input{
+        	position: absolute;
+        	left: 200px;
+        	top: 50px;
+        	display: block;
+        	border-radius:3px ;
+        	border: none;
+        	border: 1px solid #CDB7B5;
+        	height: 30px;
+        	width: 250px;
+        	padding: 0px 0px 0px 10px;
+        	font-size: 15px;}
+        #text-warm{
+        	color: red;
+        	display: none;
+        	position: absolute;
+        	right: 100px;
+        	top: 53px;}
+        #btn_01_1:hover{
+        	cursor: pointer;
+        	background: #7EC0EE;}
+        #btn_01_2:hover{
+        	cursor: pointer;
+        	background: #7EC0EE;}
+        #btn_01_3:hover{
+        	cursor: pointer;
+        	background: #7EC0EE;}
+        #btn_01_4:hover{
+        	cursor: pointer;
+        	background: #7EC0EE;}
+        #btn_01_5:hover{
+        	cursor: pointer;
+        	background: #7EC0EE;}
+        #btn_01_6:hover{
+        	cursor: pointer;
+        	background: #7EC0EE;}
+        #btn_01_7:hover{
+        	cursor: pointer;
+        	background: #7EC0EE;}		
+        #btn_01_1{
+        	position: absolute;
+        	left: 200px;
+        	top: 100px;
+        	background: #79CDCD;
+        	padding: 6px 15px 6px 15px;
+        	border: none;
+        	color: white;}
+        #btn_02_1{
+        	position: absolute;
+        	left: 300px;
+        	top: 100px;
+        	background: white;
+        	color: #79CDCD;
+        	padding: 5px 15px 5px 15px;
+        	border: 1px solid #79CDCD;
+        	border-radius: 3px;}
+        #btn_01_2{
+        	position: relative;
+        	top: 50px;
+        	right: 100px;
+        	background: #79CDCD;
+        	padding: 6px 15px 6px 15px;
+        	margin-right: 30px;
+        	border-radius: 3px;
+        	border: none;
+        	color: white;}
+        #btn_02_2{
+        	position: relative;
+        	top: 50px;
+        	right: 100px;
+        	background: white;
+        	color: #79CDCD;
+        	padding: 5px 15px 5px 15px;
+        	border: 1px solid #79CDCD;
+        	border-radius: 3px;}
+        #btn_01_3{
+        	position: relative;
+        	top: 20px;
+        	left: 122px;
+        	background: #79CDCD;
+        	padding: 6px 15px 6px 15px;
+        	margin-right: 30px;
+        	border-radius: 3px;
+        	border: none;
+        	color: white;}
+        #btn_02_3{
+        	position: relative;
+        	top: 20px;
+        	left: 150px;
+        	background: white;
+        	color: #79CDCD;
+        	padding: 5px 15px 5px 15px;
+        	border: 1px solid #79CDCD;
+        	border-radius: 3px;}
+        #btn_01_4{
+        	position: relative;
+        	background: #79CDCD;
+        	padding: 6px 15px 6px 15px;
+        	margin-right: 20px;
+        	margin-left: 20px;
+        	border-radius: 3px;
+        	border: none;
+        	color: white;}
+        #btn_02_4{
+        	position: relative;
+        	background: white;
+        	color: #79CDCD;
+        	padding: 5px 15px 5px 15px;
+        	border: 1px solid #79CDCD;
+        	border-radius: 3px;}
+        #btn_01_5{
+        	position: relative;
+        	background: #79CDCD;
+        	padding: 6px 15px 6px 15px;
+        	margin-right: 20px;
+        	margin-left: 20px;
+        	border-radius: 3px;
+        	border: none;
+        	color: white;}
+        #btn_02_5{
+        	position: relative;
+        	background: white;
+        	color: #79CDCD;
+        	padding: 5px 15px 5px 15px;
+        	border: 1px solid #79CDCD;
+        	border-radius: 3px;}
+        #btn_01_6{
+        	position: relative;
+        	background: #79CDCD;
+        	padding: 6px 15px 6px 15px;
+        	margin-right: 20px;
+        	margin-left: 20px;
+        	border-radius: 3px;
+        	border: none;
+        	color: white;}
+        #btn_02_6{
+        	position: relative;
+        	background: white;
+        	color: #79CDCD;
+        	padding: 5px 15px 5px 15px;
+        	border: 1px solid #79CDCD;
+        	border-radius: 3px;}
+        #btn_01_7{
+        	position: relative;
+        	background: #79CDCD;
+        	padding: 6px 15px 6px 15px;
+        	margin-top: 15px;
+        	margin-right: 20px;
+        	margin-left:123px;
+        	border-radius: 3px;
+        	border: none;
+        	color: white;}
+        #btn_02_7{
+        	position: relative;
+        	background: white;
+        	color: #79CDCD;
+        	padding: 5px 15px 5px 15px;
+        	border: 1px solid #79CDCD;
+        	border-radius: 3px;}
+        #box-sex{
+        	height: 50px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 30px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: block;}
+        #sex{
+        	font-size: 16px;
+        	float: left;
+        	font-weight: 550;
+        	padding-right: 50px;}
+        #sex-b{display: block;padding-right: 20px;}
+        #sex-g{display: none;padding-right: 20px;}
+        #sex-women{margin-left: 30px;}
+        #box-sex-select{
+        	height: 50px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 60px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: none;}
+        p{font-size: 18px;float: left;font-weight: 550;padding-right: 50px;}
+        #box-sdf{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 30px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: block;}
+        	#box-sdf-1{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 90px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: none;}
+        #sdf_p{padding-right: 80px;}
+        #sdf{
+        	position: relative;
+        	padding-right: 30px;
+        	right: 30px;
+        	float: left;}
+        #sdf_text{
+        	position: relative;
+        	border-radius:3px ;
+        	border: none;
+        	border: 1px solid #CDB7B5;
+        	height: 30px;
+        	width: 400px;
+        	padding: 0px 0px 0px 10px;
+        	font-size: 15px;}
+        #box-address{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 30px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: block;
+        }
+        #box-address-1{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 30px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: none;}
+        #address{
+        	position: relative;
+        	top: 3px;
+        	padding-right: 30px;
+        	right: 60px;
+        	float: left;}
+        #address_plus{
+        	position: relative;
+        	right:30px ;
+        	top: 3px;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: block;
+        	float: left;}
+        #address_plus img{width: 15px;height: 15px; padding-right: 3px; position: relative; top: 2px;}
+        #address_p{padding-right: 120px;}
+        #address{padding-right: 60px;}
+        #address_x{
+        	float: left;
+        	width: 15px;height: 15px;
+        	position: relative;
+        	top: 6px;
+        	right: 100px;
+        	display: none;}
+        #address_text{
+        	position: relative;
+        	border-radius:3px ;
+        	border: none;
+        	border: 1px solid #CDB7B5;
+        	height: 30px;
+        	width: 200px;
+        	padding: 0px 0px 0px 10px;
+        	font-size: 15px;}
+        #box-phone{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 30px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: block;}
+        #box-phone-1{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 50px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: none;}
+        #phone{
+        	float: left;
+        	position: relative;
+        	padding-right: 50px;
+        }
+        #phone_warm{
+        	position: relative;
+        	bottom: 2px;
+        	left: 120px;
+        	color: red;
+        	display: none;
+        	float: left;}
+        #phone_plus{
+        	position: relative;
+        	left:4px ;
+        	top: 3px;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: block;
+        	float: left;}
+        #phone_plus img{width: 15px;height: 15px; padding-right: 3px; position: relative; top: 2px;}
+        #phone_text{
+        	position: relative;
+        	border-radius:3px ;
+        	border: none;
+        	border: 1px solid #CDB7B5;
+        	height: 30px;
+        	width: 200px;
+        	padding: 0px 0px 0px 10px;
+        	font-size: 15px;}
+        #box-email{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 30px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: block;}
+        #box-email-1{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 50px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: none;}
+        #email{
+        	float: left;
+        	position: relative;
+        	padding-right: 50px;}
+        #email_p{
+        	float: left;
+        	position: relative;
+        	padding-right: 88px;
+        }
+        #email_plus{
+        	position: relative;
+        	left:4px ;
+        	top: 3px;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: block;
+        	float: left;}
+        #email_plus img{width: 15px;height: 15px; padding-right: 3px; position: relative; top: 2px;}
+        #email_text{
+        	position: relative;
+        	border-radius:3px ;
+        	border: none;
+        	border: 1px solid #CDB7B5;
+        	height: 30px;
+        	width: 200px;
+        	padding: 0px 0px 0px 10px;
+        	font-size: 15px;}
+        #box-intro{
+        	height: 20px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 30px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: block;}
+        #box-intro-1{
+        	position: absolute;
+        	height: 100px;
+        	margin: 0px 50px 0px 50px;
+        	padding: 30px 0px 50px 0px;
+        	border-bottom: 1px solid #D4D4D4;
+        	color: #1a1a1a;
+        	display: none;}
+        #intro{
+        	float: left;
+        	position: relative;
+        	padding-right: 50px;
+        }
+        #intro_p{
+        	float: left;
+        	position: relative;
+        	padding-right: 60px;
+        }
+        #btn-add6{
+        	position: relative;
+        	text-decoration: none;
+        	color: #0000FF;
+        	display: block;
+        	float: left;}
+        #btn-add6 img{width: 13px;height: 13px;}
+        textarea{
+        	position: relative;
+        	border-radius:3px ;
+        	border: none;
+        	border: 1px solid #CDB7B5;
+        	height: 80px;
+        	width: 300px;
+        	padding: 0px 0px 0px 10px;
+        	font-size: 15px;
+        	resize: none;}
+		</style>
+	</head>
+	<body>
+		<div id="daohang">
+			<ul id="daohanglist">
+				<li><a id="daohangfirstli" href="index.html"><img src="../img/QQ图片20181017145842.png"></a></li>
+				<li><a href="../index.html">首页</a></li>
+				<li id="danghangli2"><a href="#">话题</a></li>
+				<input type="text"/>
+				<li id="danghangli3">
+					<a id="daohanga11" href="#"><img src="../img/weixin.jpg"</a>
+					<!--<ul id="danghanglist1">
+	                    <li><a href="#">二级菜单</a></li>
+	                    <li><a href="#">二级菜单</a></li>
+	                    <li><a href="#">二级菜单</a></li>						
+					</ul>-->
+				</li>
+				<li>
+					<a id="daohanga1"><img src="../img/da8e974dc_is.jpg" /></a>
+					<ul id="danghanglist2">
+	                    <li><a href="#"><img id="grxx" src="../img/个人信息.png" />个人信息</a></li>
+	                    <li><a href="../wdrz.html"><img id="rizhi" src="../img/日志.png" />我的日志</a></li>
+	                    <li><a href="../loginpage/login.html"><img id="guanbi" src="../img/开关 开始 关闭 电源 圆形 线性.png"/>退出</a></li>
+	                    
+					</ul>
+				</li>
+			</ul>
+			<a href="#"><img id="secarch" src="../img/search.gif" /></a>
+		</div>
+		<div class="bgimg">
+			<div class="carousel">
+				<img class="back" src="../img/lunbo1.jpg" />
+				<img class="back" src="../img/lunbo2.jpg" />
+				<img class="back" src="../img/lunbo3.jpg" />
+				<img class="back" src="../img/lunbo4.jpg" />
+			</div>
+			<div class="headportrait">
+					<a href="javascript:void(0)"><img src="../img/相机 (1).png" /><br/>修改我的头像</a>
+				<img src="../img/da8e974dc_xl.jpg" style="border-radius: 5px;"/>
+			</div>
+			<div class="datepage">
+				<a id="return" href="../个人主页.html">返回我的个人主页<img src="../img/向右.png"/></a>
+				<div id="box-username">
+					<a id="username_02"></a><a id="username_warm">一天只能修改一次</a>
+					<a id="username_01">聆听你的心<a id="btn-alter1" href="javascript:void(0)"><img src="../img/笔 (1).png" />修改</a></a>
+				</div>
+				<div id="box-username-1">
+					<p>用户名</p><input type="text" id="t1" />
+					<a id="text-warm">用户名不能为空！</a>
+					<button id="btn_01_1">保存</button><button id="btn_02_1">取消</button>
+				</div>
+				<div id="box-sex">
+					<p id="sex">性别</p><p id="sex-b">男</p><p id="sex-g">女</p>
+					<a id="btn-alter2" href="javascript:void(0)"><img src="../img/笔 (1).png" />修改</a>
+				</div>
+				<div id="box-sex-select">
+					<p>性别</p>
+                    <input type="radio" value="man" checked="checked" id="sex-man" name="sex" />男
+                    <input type="radio" value="woman"  id="sex-women" name="sex" />女
+                    <button id="btn_01_2">保存</button><button id="btn_02_2">取消</button>
+                </div>
+                <div id="box-sdf">
+                	<p id="sdf_p">个人签名</p>
+                	<a id="sdf"></a>
+                	<a id="btn-alter3" href="javascript:void(0)"><img src="../img/笔 (1).png" />修改</a>
+                </div>
+                <div id="box-sdf-1">
+                	<p>个人签名</p>
+                	<input type="text" id="sdf_text" />
+                	<button id="btn_01_3">保存</button><button id="btn_02_3">取消</button>
+                </div>
+                <div id="box-address">
+                	<p id="address_p">地址</p>
+                	<a id="address"></a><img src="../img/x.png"  id="address_x"/>
+                	<a id="address_plus" href="javascript:void(0)"><img src="../img/加号 (1).png" />添加居住地</a>
+                </div>
+                <div id="box-address-1">
+                	<p>地址</p>
+                	<input type="text" id="address_text" placeholder="填写居住地"/>
+                	<button id="btn_01_4">保存</button><button id="btn_02_4">取消</button>
+                </div>
+                <div id="box-phone">
+                	<p id="phone_p">手机号码</p>
+                	<a id="phone"></a><a id="btn-alter4" href="javascript:void(0)"><img src="../img/笔 (1).png" />修改</a>
+                	<a id="phone_plus" href="javascript:void(0)"><img src="../img/加号 (1).png" />添加手机号</a>
+                </div>
+                <div id="box-phone-1">
+                	<p>手机号码</p>
+                	<input type="text" id="phone_text" placeholder="填写手机号"/>
+                	<button id="btn_01_5">保存</button><button id="btn_02_5">取消</button>
+                	<a id="phone_warm">手机号不能为空</a>
+                </div>
+                <div id="box-email">
+                	<p id="email_p">邮箱</p>
+                	<a id="email"></a><a id="btn-alter5" href="javascript:void(0)"><img src="../img/笔 (1).png" />修改</a>
+                	<a id="email_plus" href="javascript:void(0)"><img src="../img/加号 (1).png" />添加手机号</a>
+                </div>
+                <div id="box-email-1">
+                	<p>邮箱</p>
+                	<input type="text" id="email_text" placeholder="填写邮箱"/>
+                	<button id="btn_01_6">保存</button><button id="btn_02_6">取消</button>
+                </div>
+                <div id="box-intro">
+                	<p id="intro_p">个人简介</p>
+                	<a id="intro"></a>
+                	<a id="btn-add6" href="javascript:void(0)"><img src="../img/笔 (1).png" />填写</a>
+                </div>
+                <div id="box-intro-1">
+                	<p>个人简介</p>
+                	<textarea id="intro_text"></textarea><br />
+                	<button id="btn_01_7">保存</button><button id="btn_02_7">取消</button>
+                </div>
+			</div>
+		</div>
+	</body>
+</html>

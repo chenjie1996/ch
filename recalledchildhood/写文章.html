@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				font-family: "微软雅黑";
+			}
+			body{
+				background: #f6f6f6;
+			}
+			#daohang{
+			background: white;
+			height: 50px;
+			width: 100%;
+			position: fixed;
+			z-index: 100;
+		    }
+			#daohanglist a{
+				text-decoration: none;
+				color: black;
+			}
+			#daohanglist li{
+				float: left;
+				list-style: none;
+				margin-left: 50px;
+				text-align: center;
+				line-height: 50px;
+			}
+			#daohangfirstli{
+				margin-right: 50px;
+			}
+			#daohangfirstli img{
+				width: 70px;
+				height: 50px;
+				top: 0px;
+				left: 40px;
+				position: relative;
+			}
+			#daohanga1 img{
+				position: relative;
+				top: 10px;
+				width: 40px;
+				height: 30px;
+				left: -10px;
+			}
+			#daohanga11 img{
+				width: 55px;
+				height: 35px;
+				margin-top: 10px;
+			}
+			#danghangli2{
+				margin-right: 750px;
+			}
+			#daohang input{
+				position: absolute;
+				right: 800px;
+				top: 10px;
+				height: 25px;
+				width: 200px;
+				left: 400px;
+			}
+			#secarch{
+				position: absolute;
+				height: 20px;
+				left: 580px;
+				top: 15px;
+				display: inline-block;
+			}
+		#daohang>ul>li>ul{
+				position: absolute;
+				display: none;
+				left: 1200px;
+				z-index: 150;
+			}
+			#daohanglist1,#danghanglist2 li{
+				float: none;
+				margin: 0;
+				padding: 0;
+				border-radius: 5px;
+			}
+			/*#daohanglist1,#daohang>ul>li:hover ul{
+				display: block;
+				background: white;
+				line-height: 16px;
+				font-size: 16px;
+				width: 120px;
+			}*/
+			#daohang #danghanglist2{
+				display: none;
+				background: white;
+				line-height: 16px;
+				font-size: 16px;
+				width: 120px;
+			}
+			#daohanglist1,#danghanglist2 li a{
+				text-align: center;
+			}
+			#daohanglist1,#danghanglist2 li:hover{
+				background: #8590a6;
+			}
+			#daohanglist1,#danghanglist2 li a:hover{
+				color: white;
+			}
+			#daohang #danghangli3 ul{
+				position: absolute;
+				display: none;
+				left: 1100px;
+				z-index: 150;
+				top: 50px;
+			}
+			#danghangli3 li{
+				float: none;
+				margin: 0;
+				padding: 0;
+				border-top: solid 1px #AAAACC;
+				border-radius: 5px;
+			}
+			#grxx{
+				width: 20px;
+				height: 20px;
+				position: relative;
+				top: 5px;
+				left: -5px;
+			}
+			#guanbi{
+				width: 20px;
+				height: 20px;
+				position: relative;		
+				top: 5px;
+				left: -5px;		
+			}
+			#rizhi{
+				width: 20px;
+				height: 20px;
+				position: relative;		
+				top: 5px;
+				left: -5px;	
+			}
+			.xiewenzhang{
+				background: white;
+				width: 954px;
+				height: 600px;
+				position: absolute;
+				top: 70px;
+				margin-left: 200px;
+			}
+			.zhengwen{
+				width: 694px;
+				height: 150px;
+				border: none;
+				position: relative;
+				top: 20px;
+			}
+			.zhengwen1{
+				height: 50px;
+				line-height: 45px;
+				border-bottom: solid 1px #ccc;
+			}
+			.xiewenzhangsp1{	
+				font-size: 30px;
+				margin-left: 450px;	
+			}
+			.xiewenzhang a{
+				margin-left: 350px;
+				font-size: 20px;
+				text-decoration: none;
+				color: blue;
+			}
+			.xiewenzhangp1{
+				font-size: 25px;
+				margin-left: 50px;
+				display: inline-block;
+				margin-top: 10px;
+			}
+			.xiewenzhang .biaoti1{
+				width: 554px;
+				height: 25px;
+				margin-left: 20px;
+				resize: none;
+				line-height: 25px;
+				position: relative;
+				top: 5px;
+			}
+			.xiewenzhang .zhengwen1{
+				width: 950px;
+				height: 250px;
+				position: relative;
+				top: 40px;
+				resize: none;
+			}
+			.xiewenzhang .xiewenzhanga1{
+				position: relative;
+				top: 50px;
+				left: 540px;
+				font-size: 20px;
+				background: white;
+				border: none;
+				text-decoration: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="daohang">
+			<ul id="daohanglist">
+				<li><a id="daohangfirstli" href="index.html"><img src="img/QQ图片20181017145842.png"></a></li>
+				<li><a href="index.html">首页</a></li>
+				<li id="danghangli2"><a href="#">话题</a></li>
+				<input type="text"/>
+				<li id="danghangli3">
+					<a id="daohanga11" href="#"><img src="img/weixin.jpg"</a>
+					<!--<ul id="danghanglist1">
+	                    <li><a href="#">二级菜单</a></li>
+	                    <li><a href="#">二级菜单</a></li>
+	                    <li><a href="#">二级菜单</a></li>						
+					</ul>-->
+				</li>
+				<li>
+					<a id="daohanga1"><img src="img/da8e974dc_is.jpg" /></a>
+					<ul id="danghanglist2">
+	                    <li><a href="information-page/information.html"><img id="grxx" src="img/个人信息.png" />个人信息</a></li>
+	                    <li><a href="wdrz.html"><img id="rizhi" src="img/日志.png" />我的日志</a></li>
+	                    <li><a href="loginpage/login.html"><img id="guanbi" src="img/开关 开始 关闭 电源 圆形 线性.png"/>退出</a></li>
+	                    
+					</ul>
+				</li>
+			</ul>
+			<a href="#"><img id="secarch" src="img/search.gif" /></a>
+		</div>
+		<div class="xiewenzhang">
+			<div class="xiewenzhang1">
+				<span class="xiewenzhangsp1">写文章</span>
+				<a href="index.html">返回</a>
+			</div>
+			<p class="xiewenzhangp1">标题 :</p>
+			<textarea class="biaoti1" placeholder="请输入标题(最多50个字)"></textarea>
+			<textarea class="zhengwen1" placeholder="请输入你的想法......"></textarea>
+			<a class="xiewenzhanga1" href="个人主页.html">发表</a>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/move.js" ></script>
+	<script>
+		var touxiang = document.getElementById("daohanga1")
+		var xiaoxi = document.getElementById("daohanga11")
+		var ul1 = document.getElementById("danghanglist1")
+		var ul2 = document.getElementById("danghanglist2")
+		touxiang.onclick = function(){
+			ul2.style.display = "block";
+		}
+		touxiang.onblur= function(){
+			ul2.style.display = "none";
+		}
+		xiaoxi.onclick = function(){
+			ul1.style.display = "block";
+		}
+		xiaoxi.onblur= function(){
+			ul1.style.display = "none";
+		}
+	</script>
+</html> 
